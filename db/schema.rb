@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150607122728) do
+ActiveRecord::Schema.define(version: 20150607221008) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "decrypts", force: :cascade do |t|
+    t.string "one_time_pad"
+    t.string "encrypted_message"
+  end
+
+  create_table "encrypts", force: :cascade do |t|
+    t.string "input_text"
+  end
 
   create_table "mains", force: :cascade do |t|
     t.string "input_text"

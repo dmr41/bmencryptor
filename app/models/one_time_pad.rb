@@ -29,7 +29,7 @@ class OneTimePad
 #Boolean test for phrase validity - returns true or false
 	def validate_input(phrase_to_encode)
 		validate_state = false
-		valid_chars = /[A-Za-z0-9 \/_,\.\^\*\+\?\(\)\[\{\|\-\]\}~$#%!:;<>=`]+/
+		valid_chars = /[A-Za-z0-9 \/_,\.\^\*\+\?\(\)\[\{\|\-\]\}~$#@%!:;<>=`]+/
 		if (phrase_to_encode.is_a?(String) && phrase_to_encode != "" )
 			valid_content = phrase_to_encode.gsub(/\s+/, "")
 			if(valid_content[valid_chars] == valid_content)

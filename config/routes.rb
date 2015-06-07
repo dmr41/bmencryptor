@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'mains#index'
   resources :mains do
+    collection do
+    resources "encrypts", :only => [:index, :show, :create]
+    resources 'decrypts', :only => [:index, :show, :create]
+    end
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

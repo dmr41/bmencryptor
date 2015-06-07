@@ -1,6 +1,5 @@
 <h1>hi mark</h1>
 
-	<%= form_for @main do |f| %>
-		<%= f.text_field(:input_text) %>
-		<%= f.submit "Encrypt" %>
-	<%end	%>
+
+	<%= link_to "Encrypt", encrypts_path, class: "home-button", method: :get %>
+	<%= link_to "Decrypt", decrypts_path, class: "home-button", method: :get %>

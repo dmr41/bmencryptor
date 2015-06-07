@@ -1,0 +1,5 @@
+<%= form_for @decrypt do |f| %>
+	<%= f.text_area :one_time_pad %>
+	<%= f.text_area :encrypted_message %>
+	<h3><%= f.submit "decrypt"%></h3>
+<%end%>
