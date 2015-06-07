@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+.input-color {
+  color: green;
+}
+
+.pad-color {
+  color: blue;
+}
+
+.output-color {
+  color: red;
+}
+
+.failed-color {
+  color: pink;
+}
+
+.home-button {
+  background: silver;
+  text-color: green;
+  padding: 4px;
+  border-radius:4px;
+}
+
+a {
+  text-decoration: none;
+  /*color: blue;*/
+}
+a:hover{
+ text-decoration: none;
+ color: red;
+}
