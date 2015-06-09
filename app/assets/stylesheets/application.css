@@ -142,7 +142,7 @@ a.home-button:hover {
   color:#A499B3 ;
 }
 input.home-button {
-  margin-left: 23.0em;
+  margin-left: 20.75em;
   z-index: 1;
   position:relative;
   font-size: 32px;
@@ -156,7 +156,7 @@ input.home-button:hover {
 }
 
 .right-shifty {
-  margin-left:59em;
+  margin-left:52em;
 }
 
 #title-adjust {
