@@ -1,4 +1,6 @@
+<h1 class="center-header">Encryption</h1>
 <%= form_for @encrypt do |f| %>
-	<%= f.text_area :input_text %>
-	<h3><%= f.submit "encrypt"%></h3>
+	<main><%= f.text_area :input_text, class: "ta-format right-shifty", placeholder: "Text to encrypt"%></main>
+	<main></main>
+	<h3><%= f.submit "Encrypt", class: "home-button right-shifty"%></h3>
 <%end%>

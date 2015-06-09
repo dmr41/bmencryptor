@@ -1,5 +1,6 @@
+<h1 class="center-header">Decryption</h1>
 <%= form_for @decrypt do |f| %>
-	<%= f.text_area :one_time_pad %>
-	<%= f.text_area :encrypted_message %>
-	<h3><%= f.submit "decrypt"%></h3>
+	<main><%= f.text_area :one_time_pad, class: "ta-format right-shifty", placeholder: "One Time Pad Code"%></main>
+	<main><%= f.text_area :encrypted_message, class: "ta-format right-shifty", placeholder: "Encrypted Message"%></main>
+	<h3><%= f.submit "Decrypt", class: "home-button"%></h3>
 <%end%>

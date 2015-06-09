@@ -29,7 +29,7 @@ class OneTimePad
 #Boolean test for phrase validity - returns true or false
 	def validate_input(phrase_to_encode)
 		validate_state = false
-		valid_chars = /[A-Za-z0-9 \/_,\.\^\*\+\?\(\)\[\{\|\-\]\}~$#@%!:;<>=`]+/
+		valid_chars = /[A-Za-z0-9 \/_,\.\^\*\+\?\{\|\-\}~$#@%!:;<>=`]+/
 		if (phrase_to_encode.is_a?(String) && phrase_to_encode != "" )
 			valid_content = phrase_to_encode.gsub(/\s+/, "")
 			if(valid_content[valid_chars] == valid_content)
@@ -45,7 +45,7 @@ class OneTimePad
 			random_word = ""
 			for letter in  1..word.length
 				spin = 33 + rand(93)
-				if(spin == 34 || spin == 39 || spin == 92)
+				if(spin == 34 || spin == 39 || spin == 92 || spin == 40  || spin == 41 || spin == 91 || spin == 93 )
 					spin += 1
 				end
 				letter_roulet = spin.chr
@@ -65,9 +65,6 @@ class OneTimePad
 			unencoded_array.each_with_index do |starting_value, inner_index|
 				encoding_value = starting_value + one_time_array[inner_index] - 1
 				adjusted_encoded = (encoding_value % 94) + 33
-				if(adjusted_encoded == 34 || adjusted_encoded == 39 || adjusted_encoded == 92)
-					adjusted_encoded += 1
-				end
 				encrypted_word += (adjusted_encoded).chr
 			end
 			@encrypted_array << encrypted_word
@@ -94,10 +91,14 @@ end
 		decoded_word = ""
 		encrypted_array.each_with_index do |encrypted_value, inner_index|
 			decoding_value = encrypted_value - one_time_array[inner_index] +1
+
 			if(decoding_value >= 0)
-				decoded_word += (decoding_value + 33 ).chr
+				decode_unique_case_checker = decoding_value + 33
+
+				decoded_word += (decode_unique_case_checker).chr
 			else
-				decoded_word += ((decoding_value+94) + 33 ).chr
+				decode_unique_case_checker = (decoding_value+94) + 33
+				decoded_word += (decode_unique_case_checker).chr
 			end
 		end
 		@starting_array << decoded_word

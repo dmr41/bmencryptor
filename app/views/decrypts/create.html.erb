@@ -1,16 +1,11 @@
-<h1 class="center-header">Encryption output</h1>
+<%= link_to "Encrypt/Decyrpt", mains_path, class: "home-button adjust-size", method: :get %>
+<h1 class="center-header">Decryption</h1>
 
-	<h3>Your Message:
+
+		<h3>
 		<text class="input-color">
-			<%= @unencrypted_message%>
+			<p>
+				<text>Decrpyted:</text> <%= @unencrypted_message%>
+			</p>
 		</text>
-	</h3>
-	<h3>One Time Pad:
-		<text class="pad-color">
-			<%= @single_pad%>
-		</text>
-	</h3>
-	<h3>Encrypted Message:   <text class="output-color"><%= @encrypted_messsage%></text></h3>
-
-
-<%= link_to "New Encryption", mains_path, class: "home-button", method: :get %>
+		</h3>

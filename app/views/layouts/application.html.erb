@@ -6,8 +6,30 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+<div class="matx">
+ <%i = 2%>
+ <%t_value = 1%>
+ <%output_characters = ["𐌀", "𐌁", "𐌂", "𐌃", "𐌄", "𐌅", "𐌆", "𐌇", "𐌈", "𐌉", "𐌊", "𐌋", "𐌌", "𐌍", "𐌎", "𐌏", "𐌐", "𐌑", "𐌒", "𐌓", "𐌔", "𐌕", "𐌖", "𐌗", "𐌘", "𐌙", "𐌚","そ", "れ", "ぞ", "れ", "に", "す", "る", "メ", "ソ", "ッ", "ド", "が", "有", "り、", "そ", "れ", "ぞ", "れ", "の", "文"]%>
+ <%output_value = []%>
+ <%while i <= 1100 do %>
+   <%word_size = rand(40..50)%>
+   <%word_size.times do%>
+     <%output_value << output_characters.sample%>
+   <%end%>
+   <%t_value = rand(19) +1%>
+   <%t_class = "t#{t_value}"%>
+   <%style_position = "left:#{i}px;"%>
+   <%if i == 2%>
+      <%i_value = i%>
+    <%else%>
+      <%i_value = rand(18..21)%>
+    <%end%>
+   <% i += i_value%>
+   <div class=<%= t_class%> style=<%= style_position %>><%= output_value.join(" ")%></div>
+   <% output_value = []%>
+ <%end%>
 <body>
-<%= yield %>
-
+ <%= yield %>
 </body>
+</div>
 </html>
