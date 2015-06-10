@@ -10,7 +10,6 @@ class MainsController < ApplicationController
 		encryption_instance = OneTimePad.new(@user_input)
 		encryption_instance.randomize_phrase
 		encryption_instance.encrypt_phrase
-		puts @user_input.length
 		@unencrypted_message = encryption_instance.starting_phrase
 		@single_pad = encryption_instance.one_time_phrase
 		@encrypted_messsage = encryption_instance.encrypted_message
