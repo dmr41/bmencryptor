@@ -6,6 +6,10 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+
+
+<body>
 <div class="matx">
  <%i = 2%>
  <%t_value = 1%>
@@ -28,8 +32,7 @@
    <div class=<%= t_class%> style=<%= style_position %>><%= output_value.join(" ")%></div>
    <% output_value = []%>
  <%end%>
-<body>
  <%= yield %>
-</body>
 </div>
+</body>
 </html>

@@ -23,7 +23,7 @@
    overflow: scroll;
  }
 
- #rotateme {
+ #rotatreme {
    transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
 -webkit-transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
 -moz-transform: rotate(0deg) scale(1) skew(1deg) translate(0px);
@@ -41,7 +41,7 @@
 }
 
 .ta-format {
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }
 .output-message {
   color: silver;
@@ -55,7 +55,7 @@
   color: silver;
   background: rgba(54, 25, 25, .7);
   text-shadow: none;
-  margin-left:34.5em;
+  margin-left:34.5rem;
 
 }
 text {
@@ -65,7 +65,7 @@ text p {
   z-index: 1;
   position:relative;
   background: silver;
-  padding: 0 0.25em 0 0.25em;
+  padding: 0 0.25rem 0 0.25rem;
   border-radius:4px;
   min-width:400px;
   max-width:200px;
@@ -93,9 +93,9 @@ h1.center-header {
   text-align: center;
   text-shadow: none;
   background: rgba(54, 25, 25, .5);
-  margin: 0 auto;
-  margin-top:1em;
-  margin-bottom: 0.5em;
+  margin: 40%;
+  margin-top:1rem;
+  margin-bottom: 0.5rem;
   color: silver;
   border-radius: 20px;
   width: 260px;
@@ -129,9 +129,12 @@ h2.center-header {
   opacity: 0;
 }
 a.home-button{
+  float: left;
   z-index: 1;
   position:relative;
-  margin: 0 auto;
+  /*margin: 34%;*/
+  margin-left: 39%;
+  margin-bottom: 0.5rem;
   font-size: 48px;
   text-decoration: none;
   color: #534B62;
@@ -142,7 +145,7 @@ a.home-button:hover {
   color:#A499B3 ;
 }
 input.home-button {
-  margin-left: 20.75em;
+  margin-left: 45%;
   z-index: 1;
   position:relative;
   font-size: 32px;
@@ -156,7 +159,8 @@ input.home-button:hover {
 }
 
 .right-shifty {
-  margin-left:52em;
+
+  margin-left:39%;
 }
 
 #title-adjust {
@@ -170,13 +174,13 @@ input.home-button:hover {
   text-shadow: none;
 }
 p {
-  padding: 10em;
+  padding: 10rem;
 }
 textarea {
   z-index: 1;
   position:relative;
   width: 290px;
-  height: 150px;
+  height: 180px;
   border-radius: 4px;
   background: #978897;
   border: none;
@@ -191,7 +195,7 @@ textarea:focus {
 a.adjust-size {
   font-size: 24px;
   float:right;
-  margin: 0.25em 1em 0 0;
+  margin: 0.25rem 1rem 0 0;
 }
 
 
