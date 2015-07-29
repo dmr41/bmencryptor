@@ -173,6 +173,17 @@ input.home-button:hover {
   background: rgba(54, 25, 25, .5);
   text-shadow: none;
 }
+
+#error-adjust {
+  z-index: 1;
+  position:relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 600px;
+  color:silver;
+  background: rgba(54, 25, 25, .5);
+  text-shadow: none;
+}
 p {
   padding: 10rem;
 }

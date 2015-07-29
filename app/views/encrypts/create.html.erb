@@ -32,10 +32,25 @@
 	</text>
 </h3>
 <% elsif(@user_input.length != 0)	%>
-	<h3>Your input message <text class="failed-color"><%= @user_input %></text>
-		could not be encrypted.</h3>
-	<h3>ASCII characters encoded between decimal values 33-126 can be used
-	except single quotes, double quotes and the backslash.</h3>
+	<h3>
+		<text class="output-color">
+			<h3 id="error-adjust">Your input message <text class="failed-color"><%= @user_input %></text>
+				could not be encrypted.</h3>
+				</h3>
+				<h3 id="error-adjust">ASCII characters encoded between decimal values 33-126
+					can be used except single quotes, double quotes and backslash.
+			</h3>
+		</text>
+	</h3>
+	<h3>
+		<text class="output-color">
+			<h3 id="title-adjust">
+				<h3></h3>
+			</h3>
+			<text>
+		</h3>
 <% else%>
-	<h3>Your input message was empty! Please input some text</h3>
+<text class="output-color">
+	<h3 id="error-adjust">Your input message was empty! Please input some text</h3>
+</text>
 <%end%>
