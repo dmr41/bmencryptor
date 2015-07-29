@@ -5,7 +5,13 @@
 		<h3>
 		<text class="input-color">
 			<p>
-				<text>Decrpyted:</text> <%= @unencrypted_message%>
+			<%if(@not_empty_state && @content_size)%>
+				<text>Decrpyted Message:</text> <%= @unencrypted_message%>
+			<%elsif (@not_empty_state)%>
+				<text>Input values are not the same length. Please try again!</text>
+			<%elsif(@content_size)%>
+				<text>Input values are empty! Please try again!</text>
+		<%end%>
 			</p>
 		</text>
 		</h3>
