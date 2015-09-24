@@ -1,0 +1,8 @@
+---
+applications:
+- name: one-time-pad
+  memory: 1GB
+  instances: 1
+  path: .
+  command: bundle exec rake db:setup && bundle exec rails s -p $PORT
+  services:
