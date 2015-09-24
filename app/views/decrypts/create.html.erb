@@ -6,7 +6,7 @@
 		<text class="input-color">
 			<p>
 			<%if(@not_empty_state && @content_size)%>
-				<text>Decrpyted Message:</text> <%= @unencrypted_message%>
+				<text id="highlighttext">Decrpyted Message:</text> <%= @unencrypted_message%>
 			<%elsif (@not_empty_state)%>
 				<text>Input values are not the same length. Please try again!</text>
 			<%elsif(@content_size)%>
