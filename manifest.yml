@@ -1,8 +1,9 @@
----
 applications:
-- name: one-time-pad
-  memory: 1GB
-  instances: 1
+  disk_quota: 1024M
+  host: one-time-pad
+  name: one-time-pad
   path: .
-  command: bundle exec rake db:setup && bundle exec rails s -p $PORT
-  services:
+  domain: ng.bluemix.net
+  instances: 1
+  memory: 256M
+  buildpack: https://github.com/ibmdb/db2rubybuildpack
